@@ -16,7 +16,7 @@ namespace PolymorphicPartTwo
             Model = model;
             Year  = year;
         }
-        protected virtual void DisplayInfo()
+        public virtual void DisplayInfo()
         {
             Console.WriteLine($"Model: '{Model}', Year: '{Year}'");
         }
@@ -27,6 +27,12 @@ namespace PolymorphicPartTwo
         protected virtual void Accelerate(int speed) 
         {
             Console.WriteLine($"Accelerating at {speed} mph");
+        }
+        public void OperatorVeicle(int speed)
+        {
+            StartEngin();
+            Accelerate(speed);
+
         }
 
 
